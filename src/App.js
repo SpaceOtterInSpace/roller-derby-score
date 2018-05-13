@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import CartHeader from "./components/CartHeader.js";
+import Header from "./components/Header.js";
 import CartItems from "./components/CartItems.js";
 import CartTotal from "./components/CartTotal.js";
 import AddItem from "./components/AddItem.js";
-import CartFooter from "./components/CartFooter.js";
+import Footer from "./components/Footer.js";
 
 class App extends Component {
   constructor(props) {
@@ -61,11 +61,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <CartHeader />
+          <Header />
           <CartItems cartItemsList={this.state.cartItemsList} />
           <CartTotal cartItemsList={this.state.cartItemsList} />
           <AddItem products={this.state.products} addItem={this.addItem} />
-          <CartFooter copyright="2018" />
+          <Footer copyright="2018" />
         </header>
       </div>
     );
