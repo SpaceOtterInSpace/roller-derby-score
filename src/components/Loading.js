@@ -21,7 +21,7 @@ class Loading extends Component {
   render = () => {
     var elapsed = Math.round(this.state.elapsed / 100);
 
-    var seconds = (elapsed / 10).toFixed(1);
+    var seconds = (elapsed / 10).toFixed(0);
 
     return (
       <p>
