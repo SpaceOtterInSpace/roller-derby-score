@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header.js";
+import Loading from "./components/Loading.js";
 import CartItems from "./components/CartItems.js";
 import CartTotal from "./components/CartTotal.js";
 import AddItem from "./components/AddItem.js";
@@ -62,6 +63,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <Header />
+          <Loading start={Date.now()} />
           <CartItems cartItemsList={this.state.cartItemsList} />
           <CartTotal cartItemsList={this.state.cartItemsList} />
           <AddItem products={this.state.products} addItem={this.addItem} />
